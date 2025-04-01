@@ -1,5 +1,5 @@
 def calculator_score(stat):
-    """Calculando puntaje en base a sus stas
+    """Calculando puntaje en base a sus stas: kill = 3, assists = 1, deaths = -1
 
     Args:
         stat (dic): kills, assists, deaths
@@ -20,7 +20,7 @@ def accumulate_rounds (final_rounds,player,stat):
         stat (dic): kills, assists, deaths
 
     Returns:
-        Dic: stats de los jugadores por rondas
+        dict:Los stats de los jugadores por rondas
     """
     final_rounds[player]['kills'] += stat['kills']
     final_rounds[player]['assists'] += stat['assists']
@@ -29,12 +29,11 @@ def accumulate_rounds (final_rounds,player,stat):
     return final_rounds
 
 
-def mvp_player (player_list,data_round):
+def mvp_player (data_round):
     """Averiguo quien fue el mejor por ronda
 
     Args:
-        player (key): Nombres
-        data_round (dic): kills, asists, deaths
+        data_round (dic): score
 
     Returns:
         int: +1 al mejor jugador por ronda
